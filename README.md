@@ -3,8 +3,41 @@
 * 对应版本为 Graylog 4.3.3
 
 ## 前端文件单独食用方法
-- nginx做前端转发，/api/的路由全部代理到Graylog服务上去
-  
+- nginx做前端转发，/api 和config.js全部代理到Graylog服务上去
+```
+server {
+    listen       9001;
+    server_name  localhost;
+	root         /www;
+	location /api/
+	{
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	proxy_pass http://graylog:9001/api/;
+	proxy_set_header Upgrade $http_upgrade;
+	proxy_set_header Connection "upgrade";
+	}
+	location /config.js
+	{
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	proxy_pass http://graylog:9001/config.js;
+	proxy_set_header Upgrade $http_upgrade;
+	proxy_set_header Connection "upgrade";
+	}
+	location /assets/
+	{
+    	alias /www/;
+	}
+	location /
+	{
+		try_files $uri $uri/ /index.html;
+		index index.html;
+	}
+}
+```
 # Graylog Web Interface
 
 ## Requirements
