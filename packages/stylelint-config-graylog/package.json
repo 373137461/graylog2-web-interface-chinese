@@ -1,0 +1,23 @@
+{
+  "name": "stylelint-config-graylog",
+  "version": "1.0.0",
+  "description": "Graylog StyleLint config for web interface plugin authors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graylog",
+    "stylelint"
+  ],
+  "author": "Graylog, Inc. <hello@graylog.com>",
+  "license": "SSPL-1.0",
+  "dependencies": {
+    "@stylelint/postcss-css-in-js": "0.37.2",
+    "postcss-syntax": "0.36.2",
+    "stylelint": "14.6.0",
+    "stylelint-config-recommended": "7.0.0",
+    "stylelint-config-standard": "25.0.0",
+    "stylelint-config-styled-components": "0.1.1"
+  }
+}

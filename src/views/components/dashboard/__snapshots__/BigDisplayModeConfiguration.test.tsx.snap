@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BigDisplayModeConfiguration generates markup that matches snapshot 1`] = `
+<div>
+  <li
+    class=""
+    role="presentation"
+  >
+    <a
+      href="#"
+      role="menuitem"
+      tabindex="-1"
+    >
+       Full Screen
+    </a>
+  </li>
+</div>
+`;
