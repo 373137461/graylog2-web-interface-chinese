@@ -156,7 +156,7 @@ describe('ExportModal', () => {
 
     triggerFormSubmit();
 
-    await findByText('Downloading...');
+    await findByText('Down加载中...');
 
     await waitFor(() => expect(exportSearchMessages).toHaveBeenCalledTimes(1));
   });

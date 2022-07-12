@@ -131,7 +131,7 @@ class SearchForm extends React.Component {
     searchButtonLabel: 'Search',
     resetButtonLabel: 'Reset',
     useLoadingState: false,
-    loadingLabel: 'Loading...',
+    loadingLabel: '加载中...',
     queryHelpComponent: null,
     children: null,
     focusAfterMount: false,

@@ -210,7 +210,7 @@ describe('<Sidebar />', () => {
 
     fireEvent.click(await screen.findByTitle(/open sidebar/i));
 
-    await screen.findByText('Save the search or export it to a dashboard to add a custom summary and description.');
+    await screen.findByText('保存搜索或将其导出到仪表板以添加自定义摘要和说明。');
 
     expect(screen.queryByText(viewMetaData.summary)).toBeNull();
     expect(screen.queryByText(viewMetaData.description)).toBeNull();

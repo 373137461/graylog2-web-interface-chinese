@@ -249,12 +249,12 @@ describe('<Widget />', () => {
     await waitFor(() => expect(TitlesActions.set).toHaveBeenCalledWith(TitleTypes.Widget, 'duplicatedWidgetId', 'Dummy Widget (copy)'));
   });
 
-  it('adds cancel action to widget in edit mode', async () => {
+  it('在编辑模式下编辑当前选择并将取消操作添加到小部件', async () => {
     render(<DummyWidget editing />);
     await screen.findByText('Cancel');
   });
 
-  it('updates focus mode, on widget edit cancel', async () => {
+  it('更新焦点模式，在小部件上编辑取消', async () => {
     const mockUnsetWidgetEditing = jest.fn();
     render(<DummyWidget editing unsetWidgetEditing={mockUnsetWidgetEditing} />);
     const cancel = await screen.findByText('Cancel');
@@ -263,7 +263,7 @@ describe('<Widget />', () => {
     await waitFor(() => { expect(mockUnsetWidgetEditing).toHaveBeenCalledTimes(1); });
   });
 
-  it('updates focus mode, on widget edit save', async () => {
+  it('在小部件编辑保存时更新焦点模式', async () => {
     const mockUnsetWidgetEditing = jest.fn();
     render(<DummyWidget editing unsetWidgetEditing={mockUnsetWidgetEditing} />);
     const saveButton = screen.getByText('Apply Changes');
@@ -274,7 +274,7 @@ describe('<Widget />', () => {
     expect(mockUnsetWidgetEditing).toHaveBeenCalledTimes(1);
   });
 
-  it('does not trigger action when clicking cancel after no changes were made', () => {
+  it('在未进行任何更改后单击“取消”时不会触发操作', () => {
     render(<DummyWidget editing />);
 
     WidgetActions.updateConfig = mockAction(jest.fn(async () => Immutable.OrderedMap() as Widgets));
@@ -286,7 +286,7 @@ describe('<Widget />', () => {
     expect(WidgetActions.updateConfig).not.toHaveBeenCalled();
   });
 
-  it('restores original state of widget config when clicking cancel after changes were made', () => {
+  it('在进行更改后单击“取消”时，恢复小部件配置的原始状态', () => {
     const widgetWithConfig = WidgetModel.builder()
       .id('widgetId')
       .type('dummy')

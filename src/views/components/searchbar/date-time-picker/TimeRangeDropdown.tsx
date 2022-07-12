@@ -212,11 +212,11 @@ const TimeRangeDropdown = ({
 
   const title = (
     <PopoverTitle>
-      <span>Search Time Range</span>
+      <span>搜索时间范围</span>
       {limitDuration > 0 && (
         <LimitLabel>
           <Icon name="exclamation-triangle" />
-          <span>Admin has limited searching to {moment.duration(-limitDuration, 'seconds').humanize(true)}</span>
+          <span>管理员将搜索限制为 {moment.duration(-limitDuration, 'seconds').humanize(true)}</span>
         </LimitLabel>
       )}
     </PopoverTitle>

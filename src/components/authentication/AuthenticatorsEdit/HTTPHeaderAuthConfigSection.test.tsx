@@ -46,7 +46,7 @@ describe('<HTTPHeaderAuthConfigSection />', () => {
       jest.advanceTimersByTime(200);
     });
 
-    await screen.findByText('Loading...');
+    await screen.findByText('加载中...');
   });
 
   it('should use current config as initial values', async () => {

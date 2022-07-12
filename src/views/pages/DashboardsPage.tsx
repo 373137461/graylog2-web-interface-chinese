@@ -58,14 +58,13 @@ const DashboardsPage = () => {
       <span>
         <PageHeader title="Dashboards">
           <span>
-            Use dashboards to create specific views on your messages. Create a new dashboard here and add any graph or
-            chart you create in other parts of Graylog with one click.
+          使用仪表板在邮件上创建特定视图。在这里创建一个新的仪表板，单击一下即可添加您在Graylog其他部分中创建的任何图形或图表。
           </span>
 
           <span>
-            Take a look at the
+            查看
             {' '}<DocumentationLink page={DocsHelper.PAGES.DASHBOARDS} text="dashboard tutorial" />{' '}
-            for lots of other useful tips.
+            了解其他有用的提示。
           </span>
 
           <IfPermitted permissions="dashboards:create">

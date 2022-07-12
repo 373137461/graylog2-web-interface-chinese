@@ -57,7 +57,7 @@ describe('TimeRangeInput', () => {
     render(<SUTTimeRangeInput />);
 
     const from = await screen.findByTestId('from');
-    await within(from).findByText(/5 minutes ago/i);
+    await within(from).findByText(/5 分钟前/i);
 
     const to = await screen.findByTestId('to');
     await within(to).findByText(/now/i);
@@ -66,7 +66,7 @@ describe('TimeRangeInput', () => {
   it('opens date picker dropdown when clicking summary', async () => {
     render(<SUTTimeRangeInput />);
 
-    fireEvent.click(await screen.findByText(/5 minutes ago/));
+    fireEvent.click(await screen.findByText(/5 分钟前/));
 
     await screen.findByText(/Search Time Range/);
   });
@@ -75,7 +75,7 @@ describe('TimeRangeInput', () => {
     const onChange = jest.fn();
     render(<SUTTimeRangeInput value={defaultTimeRange} onChange={onChange} />);
 
-    fireEvent.click(await screen.findByText(/5 minutes ago/));
+    fireEvent.click(await screen.findByText(/5 分钟前/));
 
     await screen.findByText(/Search Time Range/);
 
@@ -101,7 +101,7 @@ describe('TimeRangeInput', () => {
   it('shows all tabs if no `validTypes` prop is passed', async () => {
     render(<SUTTimeRangeInput onChange={() => {}} value={defaultTimeRange} />);
 
-    fireEvent.click(await screen.findByText(/5 minutes ago/));
+    fireEvent.click(await screen.findByText(/5 分钟前/));
 
     await screen.findByRole('tab', { name: 'Absolute' });
     await screen.findByRole('tab', { name: 'Keyword' });
@@ -111,7 +111,7 @@ describe('TimeRangeInput', () => {
   it('shows only valid tabs if `validTypes` prop is passed', async () => {
     render(<SUTTimeRangeInput onChange={() => {}} value={defaultTimeRange} validTypes={['relative']} />);
 
-    fireEvent.click(await screen.findByText(/5 minutes ago/));
+    fireEvent.click(await screen.findByText(/5 分钟前/));
 
     await screen.findByRole('tab', { name: 'Relative' });
 
@@ -132,7 +132,7 @@ describe('TimeRangeInput', () => {
   it('allows hiding the dropdown button for quick-selecting presets', async () => {
     render(<SUTTimeRangeInput onChange={() => {}} value={defaultTimeRange} validTypes={['relative']} showPresetDropdown={false} />);
 
-    await screen.findByText(/5 minutes ago/);
+    await screen.findByText(/5 分钟前/);
 
     expect(screen.queryByRole('button', { name: /open time range preset select/i })).not.toBeInTheDocument();
   });

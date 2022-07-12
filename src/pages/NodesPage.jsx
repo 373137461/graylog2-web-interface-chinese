@@ -68,12 +68,10 @@ const NodesPage = createReactClass({
       <DocumentTitle title="Nodes">
         <div>
           <PageHeader title="Nodes">
-            <span>This page provides a real-time overview of the nodes in your Graylog cluster.</span>
+            <span>此页面提供Graylog集群中节点的实时概述。</span>
 
             <span>
-              You can pause message processing at any time. The process buffers will not accept any new messages until
-              you resume it. If the message journal is enabled for a node, which it is by default, incoming messages
-              will be persisted to disk, even when processing is disabled.
+            您可以随时暂停消息处理。进程缓冲区将不接受任何新消息，直到你可以继续。如果为节点启用了消息日志（默认情况下是这样），则传入消息将被持久化到磁盘，即使在禁用处理时也是如此。
             </span>
             <span>
               {this._renderGlobalAPIButton()}

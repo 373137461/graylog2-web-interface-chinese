@@ -73,7 +73,7 @@ class EventNotifications extends React.Component {
             </p>
             <IfPermitted permissions="eventnotifications:create">
               <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.CREATE}>
-                <Button bsStyle="success">Get Started!</Button>
+                <Button bsStyle="success">开始吧！</Button>
               </LinkContainer>
             </IfPermitted>
           </EmptyEntity>

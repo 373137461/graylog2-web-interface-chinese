@@ -191,7 +191,7 @@ const WidgetQueryControls = ({ availableStreams, globalOverride }: Props) => {
                         <QueryInput value={value}
                                     timeRange={!isEmpty(globalOverride?.timerange) ? globalOverride.timerange : values?.timerange}
                                     streams={values?.streams}
-                                    placeholder={'Type your search query here and press enter. E.g.: ("not found" AND http) OR http_response_code:[400 TO 404]'}
+                                    placeholder={'在此处键入搜索查询，然后按enter键。 例如: ("not found" AND http) OR http_response_code:[400 TO 404]'}
                                     error={error}
                                     disableExecution={disableSearchSubmit}
                                     isValidating={isValidatingQuery}

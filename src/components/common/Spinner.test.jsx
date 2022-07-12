@@ -26,7 +26,7 @@ describe('<Spinner />', () => {
   it('should render without props', () => {
     const { getByText } = render(<Spinner delay={0} />);
 
-    expect(getByText('Loading...')).not.toBeNull();
+    expect(getByText('加载中...')).not.toBeNull();
   });
 
   it('should render with a different text string', () => {

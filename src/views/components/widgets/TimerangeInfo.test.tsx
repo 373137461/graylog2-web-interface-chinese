@@ -83,14 +83,14 @@ describe('TimerangeInfo', () => {
     const relativeWidget = widget.toBuilder().timerange({ type: 'relative', range: 3000 }).build();
     render(<TimerangeInfo widget={relativeWidget} />);
 
-    expect(screen.getByText('50 minutes ago - Now')).toBeInTheDocument();
+    expect(screen.getByText('50 分钟前 - Now')).toBeInTheDocument();
   });
 
   it('should display a relative timerange with from and to', () => {
     const relativeWidget = widget.toBuilder().timerange({ type: 'relative', from: 3000, to: 2000 }).build();
     render(<TimerangeInfo widget={relativeWidget} />);
 
-    expect(screen.getByText('50 minutes ago - 33 minutes 20 seconds ago')).toBeInTheDocument();
+    expect(screen.getByText('50 分钟前 - 33 minutes 20 seconds ago')).toBeInTheDocument();
   });
 
   it('should display a All Time', () => {
@@ -111,11 +111,11 @@ describe('TimerangeInfo', () => {
 
   it('should display a keyword timerange', () => {
     const keywordWidget = widget.toBuilder()
-      .timerange({ type: 'keyword', keyword: '5 minutes ago' })
+      .timerange({ type: 'keyword', keyword: '5 分钟前' })
       .build();
     render(<TimerangeInfo widget={keywordWidget} />);
 
-    expect(screen.getByText('5 minutes ago')).toBeInTheDocument();
+    expect(screen.getByText('5 分钟前')).toBeInTheDocument();
   });
 
   it('should display global override', () => {
@@ -123,12 +123,12 @@ describe('TimerangeInfo', () => {
     asMock(GlobalOverrideStore.getInitialState).mockReturnValue(state);
 
     const keywordWidget = widget.toBuilder()
-      .timerange({ type: 'keyword', keyword: '5 minutes ago' })
+      .timerange({ type: 'keyword', keyword: '5 分钟前' })
       .build();
 
     render(<TimerangeInfo widget={keywordWidget} />);
 
-    expect(screen.getByText('Global Override: 50 minutes ago - Now')).toBeInTheDocument();
+    expect(screen.getByText('Global Override: 50 分钟前 - Now')).toBeInTheDocument();
   });
 
   it('should not throw error when related search type is empty', () => {
@@ -146,7 +146,7 @@ describe('TimerangeInfo', () => {
 
     render(<TimerangeInfo widget={relativeWidget} activeQuery="active-query-id" widgetId="widget-id" />);
 
-    expect(screen.getByText('50 minutes ago - Now')).toBeInTheDocument();
+    expect(screen.getByText('50 分钟前 - Now')).toBeInTheDocument();
   });
 
   it('should not throw error and display default time range when widget id does not exist in search widget mapping', () => {
@@ -156,6 +156,6 @@ describe('TimerangeInfo', () => {
 
     render(<TimerangeInfo widget={widget} activeQuery="active-query-id" widgetId="widget-id" />);
 
-    expect(screen.getByText('5 minutes ago - Now')).toBeInTheDocument();
+    expect(screen.getByText('5 分钟前 - Now')).toBeInTheDocument();
   });
 });

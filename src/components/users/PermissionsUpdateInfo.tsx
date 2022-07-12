@@ -26,8 +26,8 @@ const PermissionsUpdateInfo = () => (
     <Col xs={12}>
       <Alert bsStyle="info">
         <Icon name="info-circle" />{' '}<b>Granting Permissions</b><br />
-        With Graylog 4.0, we&apos;ve updated the permissions system. Granting permissions for an entity like streams and dashboards is no longer part of the user edit page.
-        It can now be configured using the <b><Icon name="user-plus" /> Share</b> button of an entity. You can find the button e.g. on the entities overview page. Learn more in the <DocumentationLink page={DocsHelper.PAGES.PERMISSIONS} text="documentation" />.
+        Graylog 4.0,更新了权限系统。为流和仪表板等实体授予权限不再是用户编辑页面的一部分。
+        现在可以使用 <b><Icon name="user-plus" /> Share</b> 按钮。您可以在实体概述页面上找到按钮。了解更多信息 <DocumentationLink page={DocsHelper.PAGES.PERMISSIONS} text="documentation" />.
       </Alert>
     </Col>
   </Row>

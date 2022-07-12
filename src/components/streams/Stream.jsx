@@ -174,7 +174,7 @@ class Stream extends React.Component {
     const isDefaultStream = stream.is_default;
     const isNotEditable = !stream.is_editable;
     const defaultStreamTooltip = isDefaultStream
-      ? <Tooltip id="default-stream-tooltip">Action not available for the default stream</Tooltip> : null;
+      ? <Tooltip id="default-stream-tooltip">操作不适用于默认流</Tooltip> : null;
 
     let editRulesLink;
     let manageAlertsLink;
@@ -184,7 +184,7 @@ class Stream extends React.Component {
         <OverlayElement overlay={defaultStreamTooltip} placement="top" useOverlay={isDefaultStream}>
           <LinkContainer disabled={isDefaultStream || isNotEditable} to={Routes.stream_edit(stream.id)}>
             <Button bsStyle="info">
-              <Icon name="stream" /> Manage Rules
+              <Icon name="stream" /> 管理规则
             </Button>
           </LinkContainer>
         </OverlayElement>
@@ -193,7 +193,7 @@ class Stream extends React.Component {
       manageAlertsLink = (
         <LinkContainer to={Routes.stream_alerts(stream.id)}>
           <Button bsStyle="info">
-            <Icon name="bell" /> Manage Alerts
+            <Icon name="bell" /> 管理警报
           </Button>
         </LinkContainer>
       );

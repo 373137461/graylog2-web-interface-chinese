@@ -107,7 +107,7 @@ describe('StreamSearchPage', () => {
     const { findByText } = render(<SimpleStreamSearchPage />);
     act(() => { jest.advanceTimersByTime(200); });
 
-    expect(await findByText('Loading...')).toBeInTheDocument();
+    expect(await findByText('加载中...')).toBeInTheDocument();
 
     await findByText('Extended search page');
   });

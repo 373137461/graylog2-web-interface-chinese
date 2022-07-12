@@ -1,3 +1,10 @@
+
+# 本项目是Graylog的中文化
+* 对应版本为 Graylog 4.3.3
+
+## 前端文件单独食用方法
+- nginx做前端转发，/api/的路由全部代理到Graylog服务上去
+  
 # Graylog Web Interface
 
 ## Requirements

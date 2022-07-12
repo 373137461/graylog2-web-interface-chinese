@@ -59,7 +59,7 @@ const UserDetailsPage = ({ params }: Props) => {
                                      userIsReadOnly={loadedUser?.readOnly ?? false} />
                   )}>
         <span>
-          Overview of details like profile information, settings, teams and roles.
+        概述个人资料信息、设置、团队和角色等详细信息。
         </span>
 
         <span>

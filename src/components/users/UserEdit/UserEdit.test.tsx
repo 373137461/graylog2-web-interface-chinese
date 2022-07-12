@@ -51,7 +51,7 @@ describe('<UserEdit />', () => {
       jest.advanceTimersByTime(200);
     });
 
-    await screen.findByText('Loading...');
+    await screen.findByText('加载中...');
   });
 
   it('should not allow editing a readOnly user', () => {

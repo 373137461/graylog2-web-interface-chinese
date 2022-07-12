@@ -111,7 +111,7 @@ describe('EntityShareModal', () => {
 
       act(() => { jest.advanceTimersByTime(200); });
 
-      expect(getByText('Loading...')).not.toBeNull();
+      expect(getByText('加载中...')).not.toBeNull();
     });
 
     it('displays an error if validation failed and disables submit', () => {

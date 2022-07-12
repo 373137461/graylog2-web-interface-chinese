@@ -151,7 +151,7 @@ const ExportModal = ({ closeModal, view, directExportWidgetId, executionState }:
                 <Button type="button" onClick={closeModal}>Close</Button>
                 <Button type="submit" onClick={submitForm} disabled={!enableDownload} bsStyle="primary" data-testid="download-button">
                   {loading
-                    ? <Spinner text="Downloading..." delay={0} />
+                    ? <Spinner text="Down加载中..." delay={0} />
                     : <><Icon name="cloud-download-alt" />&nbsp;Start Download</>}
                 </Button>
               </Modal.Footer>

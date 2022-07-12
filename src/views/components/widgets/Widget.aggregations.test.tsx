@@ -162,8 +162,8 @@ describe('Aggregation Widget', () => {
 
   const findWidgetConfigSubmitButton = () => screen.findByRole('button', { name: 'Update Preview' });
 
-  describe('on a dashboard', () => {
-    it('should apply not submitted widget search controls and aggregation elements changes when clicking on "Apply Changes"', async () => {
+  describe('在仪表板上', () => {
+    it('单击“应用更改”时，应应用未提交的小部件搜索控件和聚合元素更改', async () => {
       const newSeries = Series.create('count').toBuilder().config(SeriesConfig.empty().toBuilder().name('Metric name').build()).build();
       const updatedConfig = dataTableWidget.config
         .toBuilder()
@@ -183,14 +183,14 @@ describe('Aggregation Widget', () => {
       const nameInput = await screen.findByLabelText(/Name/);
       userEvent.type(nameInput, 'Metric name');
 
-      const metricFieldSelect = await screen.findByLabelText('Select a function');
+      const metricFieldSelect = await screen.findByLabelText('选择一个function');
       await selectEvent.openMenu(metricFieldSelect);
       await selectEvent.select(metricFieldSelect, 'Count', selectEventConfig);
 
       await findWidgetConfigSubmitButton();
 
       // Change widget search controls
-      const streamsSelect = await screen.findByLabelText('Select streams the search should include. Searches in all streams if empty.');
+      const streamsSelect = await screen.findByLabelText('选择搜索应包括的流。如果为空，则在所有流中搜索。');
       await selectEvent.openMenu(streamsSelect);
       await selectEvent.select(streamsSelect, 'Stream 1', selectEventConfig);
 
@@ -207,7 +207,7 @@ describe('Aggregation Widget', () => {
       expect(WidgetActions.update).toHaveBeenCalledWith(expect.any(String), updatedWidget);
     }, testTimeout);
 
-    it('should apply not submitted widget time range changes in correct format when clicking on "Apply Changes"', async () => {
+    it('单击“应用更改”时，应以正确的格式应用未提交的小部件时间范围更改', async () => {
       // Displayed times are based on time zone defined in moment-timezone mock.
       const updatedWidget = dataTableWidget
         .toBuilder()

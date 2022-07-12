@@ -302,7 +302,7 @@ class FilterForm extends React.Component {
                        onChange={(selected) => this.handleStreamsChange(selected === '' ? [] : selected.split(','))}
                        options={formattedStreams}
                        value={lodash.defaultTo(eventDefinition.config.streams, []).join(',')} />
-          <HelpBlock>Select streams the search should include. Searches in all streams if empty.</HelpBlock>
+          <HelpBlock>选择搜索应包括的流。如果为空，则在所有流中搜索。</HelpBlock>
         </FormGroup>
 
         <FormGroup controlId="search-within" validationState={validation.errors.search_within_ms ? 'error' : null}>

@@ -99,7 +99,7 @@ describe('SearchResult', () => {
 
     act(() => { jest.advanceTimersByTime(200); });
 
-    expect(getByText('Loading...')).not.toBeNull();
+    expect(getByText('加载中...')).not.toBeNull();
   });
 
   it('should display loading indicator, when search is loading', () => {

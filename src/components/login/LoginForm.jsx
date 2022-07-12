@@ -51,9 +51,9 @@ const LoginForm = ({ onErrorChange }) => {
 
     promise.catch((error) => {
       if (error.additional.status === 401) {
-        onErrorChange('Invalid credentials, please verify them and retry.');
+        onErrorChange('凭据无效，请验证并重试。');
       } else {
-        onErrorChange(`Error - the server returned: ${error.additional.status} - ${error.message}`);
+        onErrorChange(`错误-服务器返回：${error.additional.status} - ${error.message}`);
       }
     });
 

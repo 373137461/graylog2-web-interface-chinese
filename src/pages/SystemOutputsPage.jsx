@@ -32,12 +32,12 @@ const SystemOutputsPage = createReactClass({
         <span>
           <PageHeader title="Outputs in Cluster">
             <span>
-              Graylog nodes can forward messages via outputs. Launch or terminate as many outputs as you want here{' '}
-              <strong>and then assign them to streams to forward all messages of a stream in real-time.</strong>
+            Graylog节点可以通过输出转发消息。在此处启动或终止任意数量的输出{' '}
+              <strong>然后将它们分配给流，以实时转发流中的所有消息。</strong>
             </span>
 
             <span>
-              You can find output plugins in <a href="https://marketplace.graylog.org/" target="_blank" rel="noreferrer">the Graylog Marketplace</a>.
+            您可以在中找到输出插件 <a href="https://marketplace.graylog.org/" target="_blank" rel="noreferrer">raylog市场</a>.
             </span>
           </PageHeader>
 

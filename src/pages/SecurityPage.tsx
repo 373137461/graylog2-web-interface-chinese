@@ -61,8 +61,8 @@ const LinkTo = () => {
 const SecurityPage = () => {
   return (
     <StyledAlert bsStyle="danger" className="tm">
-      <StyledH2>Invalid License for the Security plugin</StyledH2>
-      <StyledH4>Security plugin is disabled</StyledH4>
+      <StyledH2>安全插件的许可证无效</StyledH2>
+      <StyledH4>安全插件已禁用</StyledH4>
       <p>
         The security plugin is disabled because a valid Graylog for Security license was not found{Routes.pluginRoute('SYSTEM_LICENSES', false) ? '' : ' and the enterprise plugin is not installed'}.
       </p>

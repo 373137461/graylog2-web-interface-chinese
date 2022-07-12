@@ -103,7 +103,7 @@ describe('NewSearchPage', () => {
     // @ts-ignore
     act(() => jest.advanceTimersByTime(200));
 
-    expect(await findByText('Loading...')).not.toBeNull();
+    expect(await findByText('加载中...')).not.toBeNull();
 
     await findByText('Extended search page');
   });

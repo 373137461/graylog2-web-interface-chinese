@@ -41,7 +41,7 @@ describe('TimeRangeLivePreview', () => {
     const timerange: RelativeTimeRange = { type: 'relative', from: 300 };
     render(<FormikWrap timerange={timerange} />);
 
-    expect(await screen.findByText(/5 minutes ago/i)).not.toBeNull();
+    expect(await screen.findByText(/5 分钟前/i)).not.toBeNull();
   });
 
   it('renders absolute timerange', async () => {

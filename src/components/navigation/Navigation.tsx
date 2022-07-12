@@ -37,8 +37,8 @@ import NotificationBadge from './NotificationBadge';
 import NavigationLink from './NavigationLink';
 import DevelopmentHeaderBadge from './DevelopmentHeaderBadge';
 import SystemMenu from './SystemMenu';
-import InactiveNavItem from './InactiveNavItem';
-import ScratchpadToggle from './ScratchpadToggle';
+// import InactiveNavItem from './InactiveNavItem';
+// import ScratchpadToggle from './ScratchpadToggle';
 import StyledNavbar from './Navigation.styles';
 
 const _isActive = (requestPath, prefix) => {
@@ -140,19 +140,19 @@ const Navigation = React.memo(({ pathname }: Props) => {
       <Navbar.Collapse>
         <Nav navbar>
           <LinkContainer to={Routes.SEARCH}>
-            <NavItem to="search">Search</NavItem>
+            <NavItem to="search">搜索</NavItem>
           </LinkContainer>
 
           <LinkContainer to={Routes.STREAMS}>
-            <NavItem>Streams</NavItem>
+            <NavItem>流</NavItem>
           </LinkContainer>
 
           <LinkContainer to={Routes.ALERTS.LIST}>
-            <NavItem>Alerts</NavItem>
+            <NavItem>警报</NavItem>
           </LinkContainer>
 
           <LinkContainer to={Routes.DASHBOARDS}>
-            <NavItem>Dashboards</NavItem>
+            <NavItem>仪表板</NavItem>
           </LinkContainer>
 
           {pluginNavigations}
@@ -171,12 +171,12 @@ const Navigation = React.memo(({ pathname }: Props) => {
             </LinkContainer>
           )}
 
-          <InactiveNavItem className="dev-badge-wrap">
+          {/* <InactiveNavItem className="dev-badge-wrap">
             <DevelopmentHeaderBadge />
             {pluginItems.map(({ key, component: Item }) => <Item key={key} />)}
-          </InactiveNavItem>
+          </InactiveNavItem> */}
 
-          <ScratchpadToggle />
+          {/* <ScratchpadToggle /> */}
 
           <HelpMenu active={_isActive(pathname, Routes.GETTING_STARTED)} />
 

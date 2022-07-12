@@ -90,9 +90,7 @@ const GeoIpResolverConfig = ({ config = defaultConfig, updateConfig }: Props) =>
       <h3>Geo-Location Processor</h3>
 
       <p>
-        The Geo-Location Processor plugin scans all messages for fields containing <strong>exclusively</strong> an
-        IP address, and puts their geo-location information (coordinates, ISO country code, and city name) into
-        different fields. Read more in the <DocumentationLink page="geolocation" text="Graylog documentation" />.
+      地理位置处理器插件扫描所有消息中包含的字段 <strong>唯一地</strong> IP地址，并将其地理位置信息（坐标、ISO国家代码和城市名称）放入不同的领域。阅读更多信息 <DocumentationLink page="geolocation" text="Graylog documentation" />.
       </p>
 
       <dl className="deflist">
